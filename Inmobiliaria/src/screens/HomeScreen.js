@@ -1,5 +1,5 @@
-import { View, Text, FlatList, SafeAreaView } from 'react-native'
-import React from 'react'
+import { View, Text, FlatList, SafeAreaView } from 'react-native';
+import React from 'react';
 import PropertyListItem from '../components/PropertyListItem';
 
 const HomeScreen = () => {

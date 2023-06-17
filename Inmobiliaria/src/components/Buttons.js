@@ -1,23 +1,23 @@
-import { View, Text, TouchableOpacityComponent, TouchableOpacity, StyleSheet } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react';
+import { TouchableOpacity } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
-export function Buttons(){
-  return (
-    <TouchableOpacity style = {{
-        ...styles.button,
-        backgroundColor: 'green',
-    }}>
-        <Text>Green Button</Text>
-    </TouchableOpacity>
-  )
-}
+const Buttons = () => {
+    const [isFavorite, setIsFavorite] = useState(false);
+  
+    const toggleFavorite = () => {
+      setIsFavorite(!isFavorite);
+    };
+  
+    return (
+      <TouchableOpacity onPress={toggleFavorite}>
+        <Icon
+          name={isFavorite ? 'heart' : 'heart-o'}
+          size={15}
+          color={isFavorite ? 'white' : 'white'}
+        />
+      </TouchableOpacity>
+    );
+  };
 
-const styles= StyleSheet.create({
-
-    button:{
-        alignSelf: 'center',
-        borderRadius: 10,
-        paddingVertical: 15,
-        width: '90%',
-    }
-})
+  export default Buttons

@@ -3,7 +3,7 @@ import React from 'react';
 
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { Buttons } from './buttons';
+import Buttons from './Buttons';
 
 const PropertyListItem = ( {item} ) => {
 
@@ -33,7 +33,7 @@ const PropertyListItem = ( {item} ) => {
       <Text style={styles.textPrice}>{price}</Text>
       </View>
       <View style = {styles.favorite}>
-        <Icon name='heart' size={12} color='white'/>
+        <Buttons />
       </View>
     </View>
   )
@@ -105,8 +105,8 @@ const styles = StyleSheet.create({
         borderRadius: 15,
         backgroundColor: 'forestgreen',
         padding: 6,
-        width: 25,
-        height: 25,
+        width: 27,
+        height: 27,
         tintColor:'white',
         position: 'absolute',
         top: 78,
